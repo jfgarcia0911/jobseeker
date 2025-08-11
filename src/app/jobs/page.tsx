@@ -75,7 +75,7 @@ export default async function JobsPage({searchParams}: {
                                     Posted by {job.postedBy.name}
                                 </span>
                                 <Link href={`/jobs/${job.id}`} className="text-blue-600 hover:text-blue-700 font-medium">
-                                    View Job
+                                     View Job &rarr;
                                 </Link>
                             </div>
                     </div>
