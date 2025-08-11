@@ -33,10 +33,10 @@ export default function PostJobPage() {
     } catch(error){
         console.error("Error posting job:", error);
     }
-  }
+  } 
   return (
     <div className='max-w-2xl m-auto h-full '>
-      <form onSubmit={handleSubmit} className='px-4 mt-8 bg-gray-50 rounded-xl'>
+      <form onSubmit={handleSubmit} className='px-4 py-2 mt-8 bg-white rounded-xl '>
         <h1 className='text-2xl font-bold mb-6 text-gray-900'>Post a Job</h1>
         <div>
             <label htmlFor="title" className='block text-sm font-medium text-gray-700'>Job Title</label>
