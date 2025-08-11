@@ -5,13 +5,22 @@ import { RiBriefcase4Fill } from "react-icons/ri";
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import { logout } from '@/lib/auth';
+import { useRouter } from "next/navigation";
 export default function Navbar() {
 
-  const { data: session } = useSession();
+  const router = useRouter();
+  const { data: session, update } = useSession();
 
+  const handleLogout = async () => {
+    await logout();
+    await update();
+    // Force refresh to clear client-side cache
+    router.refresh();
+  };
+  
   return (
-    <nav>
-      <div className=' flex items-center justify-between py-4 mx-[300px] text-gray-500 '>
+    <nav className='flex items-center justify-center'>
+      <div className=' flex items-center justify-between p-4  w-7xl text-gray-500 '>
         <div >
             
             <Link href="/" className='flex items-center space-x-2'>
@@ -31,7 +40,7 @@ export default function Navbar() {
            <>
            <Link className=' hover:text-gray-700' href="/jobs/post">Post a Jobs</Link> 
            <Link className=' hover:text-gray-700' href="/dashboard">Dashboard</Link> 
-            <Link className=' hover:text-gray-700' href="/auth/signout" onClick={logout}>Sign Out</Link>
+            <button className=' hover:text-gray-700'  onClick={handleLogout}>Sign Out</button>
             </> 
             :
              <Link className=' hover:text-gray-700' href="/auth/signin">Sign In</Link>} 

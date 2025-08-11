@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 export default function page() {
 	return (
 		<div className="min-h-[calc(100vh-10rem)] flex flex-col items-center justify-center ">
-			<div className="flex flex-col items-center justify-center border-gray shadow-lg w-[400px] p-2">
+			<div className="flex flex-col items-center justify-center border-gray shadow-md w-[400px] p-2">
 				<div className="font-bold text-3xl mb-4 opacity-90">
 					Welcome to Joblist
 				</div>
