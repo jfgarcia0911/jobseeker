@@ -2,7 +2,7 @@ import {auth } from '@/auth'
 import {prisma} from '@/lib/prisma'
 import { NextResponse } from 'next/server';
 
-
+// Add Jobs Post
 export async function POST(request: Request) {
     const session = await auth();
 
@@ -20,6 +20,29 @@ export async function POST(request: Request) {
             }
         });
         return NextResponse.json(job);
+
+
+    }catch(error) {
+       console.error("Error creating job: ", error); 
+       return new NextResponse("Internal server error", {status: 500});
+    }
+
+}
+
+
+
+// Find specific job post
+export async function GET(request: Request) {
+    
+    try {
+
+        const jobs = await prisma.job.findMany({
+            orderBy: {
+                postedAt: 'desc',
+            },
+        })
+
+        return NextResponse.json(jobs)
 
 
     }catch(error) {
