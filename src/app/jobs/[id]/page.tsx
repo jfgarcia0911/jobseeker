@@ -2,7 +2,7 @@ import {prisma} from '@/lib/prisma'
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { formatDistanceToNow } from 'date-fns';
-
+import ApplyButton from './ApplyButton';
 
 export default async function JobPage({params}: {params: Promise<{id: string}>}){
 
@@ -55,6 +55,11 @@ export default async function JobPage({params}: {params: Promise<{id: string}>})
                         {job.description}
                     </div>
                 </div>
+                
+                <div className='mt-8 pt-8 border-t border-gray-200'>
+                        <ApplyButton jobId={job.id}/>
+                </div>
+
             </div>
         </div>
     )
