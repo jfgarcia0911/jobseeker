@@ -20,7 +20,7 @@ export default function Navbar() {
   
   return (
     <nav className='flex items-center justify-center bg-white  shadow-md'>
-      <div className=' flex items-center justify-between p-4  w-7xl text-gray-500 '>
+      <div className='block sm:flex items-center justify-center sm:justify-between p-4  md:w-7xl text-gray-500 '>
         <div >
             
             <Link href="/" className='flex items-center space-x-2'>

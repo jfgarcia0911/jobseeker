@@ -60,10 +60,10 @@ export default function PostJobPage() {
             <label htmlFor="type" className='block text-sm font-medium text-gray-700'>Job Type</label>
             <select name="type" id="type" required className='w-full border border-gray-400 p-2 mb-5 mt-1 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400'>
                 <option value="">Select a type</option>
-                <option value="full-time">Full Time</option>
-                <option value="part-time">Part Time</option>
-                <option value="contract">Contract</option>
-                <option value="intership">Internship</option>
+                <option value="Full-time">Full Time</option>
+                <option value="Part-time">Part Time</option>
+                <option value="Contract">Contract</option>
+                <option value="Intership">Internship</option>
             </select>
         </div>
 
