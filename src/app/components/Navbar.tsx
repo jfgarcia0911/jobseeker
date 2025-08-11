@@ -19,7 +19,7 @@ export default function Navbar() {
   };
   
   return (
-    <nav className='flex items-center justify-center'>
+    <nav className='flex items-center justify-center  shadow-md'>
       <div className=' flex items-center justify-between p-4  w-7xl text-gray-500 '>
         <div >
             

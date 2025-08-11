@@ -19,8 +19,8 @@ export async function POST(request: Request) {
                 postedById: session.user.id
             }
         });
-
         return NextResponse.json(job);
+
 
     }catch(error) {
        console.error("Error creating job: ", error); 
