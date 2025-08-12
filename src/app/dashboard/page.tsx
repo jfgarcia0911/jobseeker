@@ -3,7 +3,7 @@ import { redirect  } from 'next/navigation'
 import React from 'react'
 import Link from 'next/link';
 import { prisma } from '@/lib/prisma';
-import { formatDistance, formatDistanceToNow } from 'date-fns';
+import { formatDistanceToNow } from 'date-fns';
 
 
 export default async function DashboardPage() {
